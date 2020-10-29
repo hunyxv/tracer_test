@@ -17,3 +17,5 @@ docker run -d --name jaeger \
   -p 9411:9411 \
   jaegertracing/all-in-one:1.20
 ```
+效果展示：
+![屏幕快照 2020-10-29 下午2.06.59.png](https://i.loli.net/2020/10/29/TxPvwMC34UH1cEm.png)
