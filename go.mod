@@ -1,11 +1,17 @@
-module main
+module github.com/hunyxv/tracer_test
 
-go 1.15
-
-replace tracer => ./tracer
+go 1.17
 
 require (
-	github.com/opentracing-contrib/go-stdlib v1.0.0 // indirect
+	github.com/opentracing-contrib/go-stdlib v1.0.0
 	github.com/opentracing/opentracing-go v1.2.0
-	tracer v0.0.0-00010101000000-000000000000 // indirect
+	github.com/uber/jaeger-client-go v2.30.0+incompatible
+)
+
+require (
+	github.com/HdrHistogram/hdrhistogram-go v1.1.2 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
+	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
+	go.uber.org/atomic v1.9.0 // indirect
 )
