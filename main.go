@@ -21,7 +21,7 @@ func main() {
 		closer io.Closer
 	)
 
-	tracer.Tracer, closer, err = tracer.NewTracer("servicename", "hongning:6831")
+	tracer.Tracer, closer, err = tracer.NewTracer("servicename", "127.0.0.1:6831")
 	if err != nil {
 		log.Fatal("tracer,NewTracer error(%v)", err)
 	}

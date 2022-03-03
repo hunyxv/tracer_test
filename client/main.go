@@ -20,7 +20,7 @@ var (
 )
 
 func main() {
-	tracer.Tracer, closer, err = tracer.NewTracer("servicename", "hongning:6831")
+	tracer.Tracer, closer, err = tracer.NewTracer("client", "127.0.0.1:6831")
 	if err != nil {
 		log.Fatal("tracer,NewTracer error(%v)", err)
 	}
@@ -31,7 +31,7 @@ func main() {
 	defer span.Finish()
 
 	ctx := opentracing.ContextWithSpan(context.Background(), span)
-	req, err := http.NewRequest("GET", "http://hongning:8002/getIP", nil)
+	req, err := http.NewRequest("GET", "http://10.0.1.7:8002/getIP", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -46,7 +46,7 @@ func main() {
 		return
 	}
 	defer res.Body.Close()
-
+	log.Println(req.Header)
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		onError(span, err)

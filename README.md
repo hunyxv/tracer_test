@@ -19,3 +19,6 @@ docker run -d --name jaeger \
 ```
 效果展示：
 ![demo](https://i.loli.net/2020/10/29/TxPvwMC34UH1cEm.png)
+
+> ⚠️ jaeger-client-go 已经弃用，应改用 github.com/open-telemetry/opentelemetry-go
+> 示例：https://github.com/open-telemetry/opentelemetry-go/blob/main/example/jaeger/main.go
